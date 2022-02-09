@@ -1,0 +1,15 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "This is a package for my first project about node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vin",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "validator": "^13.7.0"
+  }
+}
