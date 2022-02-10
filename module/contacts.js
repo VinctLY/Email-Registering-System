@@ -91,7 +91,7 @@ function saveEmailContact(name, email) {
             emails.push(emailReg)
 
             fs.writeFileSync(data_email_path, JSON.stringify(emails));
-            console.log(`Your name ${name} and email ${email} has been registered. Thanks for registering!`)
+            console.log(`Your name ${chalk.red(name)} and email ${chalk.green(email)} has been registered. Thanks for registering!`)
 
             rl.close();
         }
