@@ -91,14 +91,18 @@ function saveEmailContact(name, email) {
             emails.push(emailReg)
 
             fs.writeFileSync(data_email_path, JSON.stringify(emails));
-            console.log('Thanks for registering!')
+            console.log(`Your name ${name} and email ${email} has been registered. Thanks for registering!`)
 
             rl.close();
         }
 
         const format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+        const formatNumber = /\d/;
         if (format.test(name)) {
-            console.log('Your name nor email could not contain  symbol!')
+            console.log('Your name nor email could not contain symbol!')
+            rl.close()
+        } else if (formatNumber.test(name)) {
+            console.log('Your name could not contain number!')
             rl.close()
         } else {
             success()
